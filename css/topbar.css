@@ -1,0 +1,63 @@
+/* ==============top bar ============ */
+.topbar {
+    background-color: var(--clr-white);
+    padding: .8em 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.topbar-content {
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 a {
+    color: var(--clr-dark);
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-light);
+    padding: 0em 1em 0;
+    border-radius: 100vmax;
+    gap: 1em;
+}
+
+.search-bar i {
+    color: var(--clr-gray);
+}
+
+.search-bar input {
+    padding: .7em 3em .7em .5em;
+    width: 30vw;
+    background-color: var(--clr-light);
+}
+
+.search-bar input::placeholder {
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.topbar-profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-img {
+    display: flex;
+    align-items: center;
+}
+
+@media(width<=998px) {
+    .search-bar {
+        display: none;
+    }
+}

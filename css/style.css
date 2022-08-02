@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ===========Variables=========== */
+:root {
+    --clr-primary: #00aed6;
+    --clr-secondary: #ccecff;
+    --clr-success: #40eb87;
+    --clr-danger: #f54141;
+    --clr-dark: #1a273b;
+    --clr-black: #151b27;
+    --clr-white: #fff;
+    --clr-light: #f0eef6;
+    --clr-gray: #98a4b3;
+    --clr-muted: var(var(--clr-gray));
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: .5rem 2rem;
+    --search-padding: .5rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.5rem;
+    --sticky-top-right: -20rem;
+
+    --transition: all 300ms ease-in-out;
+
+}
+
+/* ============global css ========== */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+    /* position: absolute;
+    content: ""; */
+}
+
+body {
+    background-color: var(--clr-light);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========default css=========== */
+input {
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+main {
+    width: 80%;
+    margin-inline: auto;
+
+}
+
+.btn {
+    cursor: pointer;
+    padding: var(--btn-padding);
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    border-radius: 100vmax;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.profile-img img {
+    width: 3em;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+
+/* main content css start  */
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 2em;
+    padding: 1em 0;
+}
+
+.main-section>* {
+    /* border: 1px solid ; */
+}
+
+/* left aside bar css start  */
+.left-asidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.left-asidebar-top {
+    display: flex;
+    padding: var(--card-padding);
+    background-color: var(--clr-white);
+    border-radius: 8px;
+    align-items: center;
+    gap: 1em;
+}
+
+
+.profile-photo img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+
+.profile-content h3 {
+    font-size: 1rem;
+}
+
+.profile-content p {
+    font-size: 1rem;
+    color: var(--clr-gray);
+}
+
+
+/* left sidebar bottom  */
+.left-asidebar-bottom {}
+
+.left-asidebar-bottom .content {
+    border-radius: 8px;
+    background-color: var(--clr-white);
+}
+
+.left-asidebar-bottom .content>div {
+    padding: .7em 1.5em;
+    transform: var(--transition);
+}
+
+.left-asidebar-bottom .content>div:hover {
+
+    background-color: var(--clr-light);
+}
+
+.menu-list a{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.menu-list a i{
+    color: var(--clr-gray);
+}
+@media(width<=1279px){
+    a .left-asidebar-top,.menu-list a span{
+        display: none;
+    }
+}
+/* main mid content aside bar css start  */
+
+
+/* right aside bar css start  */
